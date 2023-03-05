@@ -56,7 +56,9 @@ In this example, we create a frame with a screen and a button. We set the conten
 close operation. The button is styled with a hexagon shape and the End Crystal style.
 
 ## Contributing
-If you would like to contribute to NimbusUI, please read our contribution guidelines for more information.
+We welcome and greatly appreciate any contribution to NimbusUI. Whether you're a seasoned developer or just starting out, your input can help make the library even better.
+
+Thank you for your interest in contributing to NimbusUI!
 
 ## License
 NimbusUI is licensed under the MIT License.
