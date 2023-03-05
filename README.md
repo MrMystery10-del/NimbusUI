@@ -15,11 +15,7 @@ NimbusUI is a user interface library that provides a Swing extension with a mode
 NimbusUI can be installed using your favorite build tool. Add the following dependency to your `pom.xml` file:
 
 ```xml
-<dependency>
-    <groupId>com.nimbusui</groupId>
-    <artifactId>nimbusui</artifactId>
-    <version>1.0.0</version>
-</dependency>
+Currently there are no installations for build tools, for using this lib you need to install the jar and smash into ur project
 ```
 Alternatively, you can download the library from the GitHub repository and include it in your project manually.
 
