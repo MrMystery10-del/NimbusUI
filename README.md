@@ -26,7 +26,7 @@ Alternatively, you can download the library from the GitHub repository and inclu
 Getting started
 To get started with NimbusUI, you can use the following code as an example:
 
-java
+```java
 Copy code
 import content.*;
 import visual.Shapes;
@@ -51,6 +51,7 @@ public class NimbusExample {
         System.exit(0);
     }
 }
+```
 In this example, we create a frame with a screen and a button. We set the content pane of the frame to the screen and set a custom close operation. The button is styled with a hexagon shape and the End Crystal style.
 
 Contributing
