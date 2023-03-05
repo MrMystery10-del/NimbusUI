@@ -24,22 +24,26 @@ To get started with NimbusUI, you can use the following code as an example:
 
 ```java
 import content.*;
-import visual.Shapes;
+import visual.Shapes; // Keep in mind that the imports can change based on the version and build tool
 
 public class NimbusExample {
 
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException {
         Frame frame = new Frame("Nimbus example");
-        Screen screen = new Screen(new Style(Styles.END_CRYSTAL));
-        Button button = new Button("Start application! ", Shapes.HEXAGON);
+        Screen screen = new Screen(new Style(Styles.END_CRYSTAL)); // There are many possible Styles you can choose
+        Button button = new Button("Start application! ", Shapes.HEXAGON); // There are many shapes you can choose
 
+        // You place the component on Imagine-Screen(1920x1080) and it will automatically resize
+        // based on the users resolution of the window
         button.setBounds(650, 300, 500, 300);
+        
         screen.add(button);
 
         frame.setContentPane(screen);
-        frame.setDefaultCloseOperation("newCloseOperation");
+        frame.setDefaultCloseOperation("newCloseOperation"); // Set a new close operation when pressing close button
     }
 
+    // When using a method as a new close operation, your IDE will still think that this method is unused
     @SuppressWarnings("unused")
     public static void newCloseOperation(){
         System.out.println("You not closed the window :P");
@@ -47,7 +51,9 @@ public class NimbusExample {
     }
 }
 ```
-In this example, we create a frame with a screen and a button. We set the content pane of the frame to the screen and set a custom close operation. The button is styled with a hexagon shape and the End Crystal style.
+(https://user-images.githubusercontent.com/69641472/222967355-2d14a2f9-ff16-40e0-9a33-c752fae71aea.png)
+In this example, we create a frame with a screen and a button. We set the content pane of the frame to the screen and set a custom![Screenshot 2023-03-05 154312]
+close operation. The button is styled with a hexagon shape and the End Crystal style.
 
 ## Contributing
 If you would like to contribute to NimbusUI, please read our contribution guidelines for more information.
