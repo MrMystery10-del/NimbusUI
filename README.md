@@ -23,11 +23,10 @@ NimbusUI can be installed using your favorite build tool. Add the following depe
 ```
 Alternatively, you can download the library from the GitHub repository and include it in your project manually.
 
-Getting started
+## Getting started
 To get started with NimbusUI, you can use the following code as an example:
 
 ```java
-Copy code
 import content.*;
 import visual.Shapes;
 
@@ -54,8 +53,8 @@ public class NimbusExample {
 ```
 In this example, we create a frame with a screen and a button. We set the content pane of the frame to the screen and set a custom close operation. The button is styled with a hexagon shape and the End Crystal style.
 
-Contributing
+## Contributing
 If you would like to contribute to NimbusUI, please read our contribution guidelines for more information.
 
-License
+## License
 NimbusUI is licensed under the MIT License.
