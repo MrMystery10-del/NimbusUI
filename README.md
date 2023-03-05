@@ -61,4 +61,4 @@ We welcome and greatly appreciate any contribution to NimbusUI. Whether you're a
 Thank you for your interest in contributing to NimbusUI!
 
 ## License
-NimbusUI is licensed under the MIT License.
+NimbusUI is licensed under the Apache-2.0 License.
