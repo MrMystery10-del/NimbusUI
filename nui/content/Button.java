@@ -12,6 +12,7 @@ public class Button extends JButton implements NimbusComponent {
 
     private boolean paintBorder = false;
     private Shapes shape = Shapes.RECTANGLE;
+    private Icon icon = null;
 
     /**
      * Creates a new button
@@ -55,6 +56,11 @@ public class Button extends JButton implements NimbusComponent {
     }
 
     @Override
+    public void setIcon(Icon icon) {
+        this.icon = icon;
+    }
+
+    @Override
     protected void paintComponent(Graphics graphics) {
         final int width = getSize().width;
         final int height = getSize().height;
@@ -66,6 +72,10 @@ public class Button extends JButton implements NimbusComponent {
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
         Shape.drawShape(g2d, shape, width, height, backgroundColor, borderColor, armedColor, getModel().isArmed());
+
+        if (icon != null)
+            g2d.drawImage(((ImageIcon) icon).getImage(), 0, 0, getWidth(), getHeight(), null);
+
         super.paintComponent(graphics);
     }
 

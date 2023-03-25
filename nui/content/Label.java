@@ -6,38 +6,45 @@ import visual.Shapes;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
+import java.awt.image.BufferedImage;
 
 public class Label extends JLabel implements NimbusComponent {
 
     private Shapes shape = Shapes.RECTANGLE;
     private Color backgroundColor = Color.GRAY;
+    private Icon icon = null;
 
-    public Label(){
+    public Label() {
         setDefaultLabel();
     }
 
-    public Label(String text){
+    public Label(String text) {
         setText(text);
         setDefaultLabel();
     }
 
-    public Label(Shapes shape){
+    public Label(Shapes shape) {
         this.shape = shape;
 
         setDefaultLabel();
     }
 
-    public Label(String text, Shapes shape){
+    public Label(String text, Shapes shape) {
         this.shape = shape;
 
         setText(text);
         setDefaultLabel();
     }
 
-    private void setDefaultLabel(){
+    private void setDefaultLabel() {
         setOpaque(true);
         setFont(new Font("Arial", Font.BOLD, 30));
         setHorizontalAlignment(SwingConstants.CENTER);
+    }
+
+    @Override
+    public void setIcon(Icon icon) {
+        this.icon = icon;
     }
 
     @Override
@@ -60,6 +67,9 @@ public class Label extends JLabel implements NimbusComponent {
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
         Shape.drawShape(g2d, shape, width, height, backgroundColor);
+
+        if (icon != null)
+            g2d.drawImage(((ImageIcon) icon).getImage(), 0, 0, getWidth(), getHeight(), null);
 
         g2d.setColor(getForeground());
         FontMetrics fontMetrics = g2d.getFontMetrics();
